@@ -1,0 +1,23 @@
+﻿<div class="modal-backdrop fade in" *ngIf="popupModelData.open"></div>
+<!-- Modal -->
+<div id="myModal" class="modal-medium school-remove-popup {{popupModelData.open?'in':'hide'}} fade">
+    <div class="modal-header">
+        <h3 class="modal-title" *ngIf="popupModelData['removeStaffMember']||popupModelData['showCommunityList']">Remove Your Account From School Edition</h3>
+        <h3 class="modal-title" *ngIf="popupModelData['showSuccessMessage']">Changes saved </h3>
+    </div>
+    <div class="modal-body modal-content-box {{popupModelData['showCommunityList']?'scroll-model-body':''}} no-css-rm-staff-mbody">
+        <div *ngIf="popupModelData['removeStaffMember']">
+            <p *ngFor="let message of inputData.messageList" [trustedInnerHtml]="message"></p>
+            <div class="form-btn-filed">
+                <a class="cancel-btn" href="javascript:void(0);" (click)="closeModel()">Cancel</a>
+                <a class="form-button" (click)="removeSchoolStaff()">Yes, Remove</a>
+            </div>
+        </div>
+        <div *ngIf="popupModelData['showSuccessMessage']">
+            <p>Your changes have been saved.</p>
+            <div class="form-btn-filed btn-group-center">
+                <a class="form-button" href="javascript:void(0);" (click)="deletedSuccessfully()">Close</a>
+            </div>
+        </div>
+    </div>
+</div>

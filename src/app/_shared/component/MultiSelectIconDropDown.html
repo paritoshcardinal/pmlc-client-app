@@ -1,0 +1,34 @@
+﻿<div class="btn-group bootstrap-select custom-select-btn">
+    <button type="button" class="btn dropdown-toggle btn-multiselect lng-dropdown-btn btn-default" (click)="toggleDropdown()">
+        <span class="filter-option pull-left">
+            {{ inputConfig.multiselect? inputConfig.defaultTitle:selectedModel.length > 0? selectedModel[0].name:inputConfig.defaultTitle }}
+        </span>
+        <span class="caret"></span>
+    </button>
+    <ul *ngIf="isVisible && inputConfig.options.length > 0" class="dropdown-menu multiple-selection-activity" style="display: block;">
+        <li *ngIf="inputConfig.checkAll && inputConfig.options.length>0">
+            <a href="javascript:void(0);" role="menuitem" tabindex="-1" (click)="checkAll()">
+                <div class="checkbox checkbox-primary all-classes">
+                    <input checked="checked" class="styled" type="checkbox"
+                           [checked]="isAllSelected()" />
+                    <label for="checkbox0">{{ inputConfig.checkAllText }}</label>
+                </div>
+            </a>
+        </li>
+        <li *ngFor="let option of inputConfig.options;let i = index"  [ngClass]="{'disabled-menu-item': option.isDisable}">
+            <a href="javascript:void(0)" role="menuitem" tabindex="-1" (click)="setSelected(option)" *ngIf="inputConfig.multiselect; else singleSelect">
+                <div class="checkbox checkbox-primary">
+                    <input checked="checked" class="styled" type="checkbox" [checked]="isSelected(option)" />
+                    <label for="checkbox1">
+                        <img *ngIf="option.imgPath!=''" width=18 src="/Content/assets/images/{{option.imgPath}}" /> {{ option.name }}
+                    </label>
+                </div>
+            </a>
+            <ng-template #singleSelect>
+                <a href="javascript:void(0)" role="menuitem" tabindex="-1" (click)="setSelected(option)">
+                    <img *ngIf="option.imgPath!=''" width=18 src="/Content/assets/images/{{option.imgPath}}" /> {{ option.name }}
+                </a>
+            </ng-template>
+        </li>
+    </ul>
+</div>

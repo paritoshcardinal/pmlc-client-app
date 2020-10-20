@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "name": "PMLC-Web",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "build": "SET NODE_ENV=development && node_modules\\.bin\\webpack --config webpack.config.js -d --color -d --color",
+    "build:Prod": "SET NODE_ENV=production && SET NODE --max_old_space_size=8192 && node_modules\\.bin\\webpack   --config webpack.config.js  --color --progress",
+    "postinstall": "copy-files-from-to --config copy-files-from-to.json",
+    "fix-memory-limit": "cross-env LIMIT=8192 increase-memory-limit"
+  },
+  "dependencies": {
+    "@angular/common": "7.2.0",
+    "@angular/compiler": "7.2.0",
+    "@angular/core": "7.2.0",
+    "@angular/forms": "7.2.0",
+    "@angular/platform-browser": "7.2.0",
+    "@angular/platform-browser-dynamic": "7.2.0",
+    "@angular/router": "7.2.0",
+    "@angular/cdk": "7.2.0",
+    "@ngx-translate/core": "11.0.1",
+    "@ngx-translate/http-loader": "4.0.0",
+    "@types/core-js": "0.9.35",
+    "@types/crypto-js": "3.1.43",
+    "@types/node": "6.0.60",
+    "@types/webpack-env": "1.13.0",
+    "angular-translate-loader-static-files": "2.18.1",
+    "crypto-js": "3.1.9-1",
+    "intl": "1.2.5",
+    "jquery-expander": "1.7.0",
+    "ng2-nouislider": "1.7.13",
+    "ngx-device-detector": "1.3.5",
+    "nouislider": "9.0.0",
+    "rxjs": "6.4.0",
+    "throttle-debounce": "2.3.0",
+    "zone.js": "0.8.29"
+  },
+  "devDependencies": {
+    "@angular/cli": "7.2.0",
+    "@angular/compiler-cli": " 7.2.0",
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "ajv": "6.9.1",
+    "babel-loader": "8.0.0",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "clean-webpack-plugin": "0.1.18",
+    "copy-files-from-to": "1.2.0",
+    "copy-webpack-plugin": "4.6.0",
+    "core-js": "^2.4.1",
+    "cross-env": "5.2.0",
+    "exports-loader": "0.6.4",
+    "expose-loader": "0.7.5",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "^4.5.0",
+    "hydra-ngtools-webpack": "0.1.1",
+    "imports-loader": "0.7.1",
+    "increase-memory-limit": "1.0.7",
+    "raw-loader": "^4.0.2",
+    "rxjs-compat": "6.4.0",
+    "script-loader": "0.7.2",
+    "terser-webpack-plugin": "1.2.3",
+    "ts-helpers": "1.1.2",
+    "typescript": "3.1.6",
+    "uglify-loader": "3.0.0",
+    "webpack": "4.29.1",
+    "webpack-chunk-rename-plugin": "1.0.3",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      "syntax-dynamic-import"
+    ]
+  }
+}

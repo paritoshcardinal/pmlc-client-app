@@ -1,0 +1,39 @@
+{ "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "esNext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "mapRoot": "",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2017",
+      "es2017.object"
+    ],
+    "outDir": "aot",
+    "skipLibCheck": true,
+    "rootDir": "."
+  },
+  "files": [
+
+    //polyfills
+    "./src/polyfills.ts",
+    "./src/internationalization/intlSafariIE.shim.ts",
+	
+	//main
+   "./src/main",
+    //myaccount
+    "./src/app/educator/account/educator.account.module.ts",
+
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot"
+  }
+}

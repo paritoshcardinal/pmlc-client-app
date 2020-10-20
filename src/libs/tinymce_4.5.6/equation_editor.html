@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="/Scripts/libs/custom/bootstrap.js"></script>
+    <!-- Update with your paths to everything -->
+    <script type="text/javascript" src="/Scripts/libs/mathquill/mathquill.min.js"></script>
+    <script type="text/javascript" src="/Scripts/libs/mathquill/equation_editor.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/mathquill.css">
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Content/equation_editor.css">
+    <style>
+         .scrollable {
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+      height:310px;
+}
+.scrollable * {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+    </style>
+</head>
+<body class="equation-editor">
+    
+    <div class="cols">
+        <div class="math-form col">
+            <div class="button-bar"></div>
+            <div class="math"></div>
+        </div>
+       
+        <div class="button-groups col tile_scroll_bind" id="symboleCollection">
+          </div>
+    </div>
+       
+    <script type="text/javascript">
+        var params = top.tinymce.activeEditor.windowManager.getParams();
+        var existingLatex = params['existing_latex'];
+
+        var equationEditor = new EquationEditor.EquationEditorView({
+            $el: $('.equation-editor'),
+            existingLatex: existingLatex,
+            restrictions: top.tinymce.equationEditorRestrictions
+        }).render();
+
+        params['latexInput'] = equationEditor.input();
+        top.tinymce.activeEditor.windowManager.setParams(params);
+
+        setTimeout(function () { $('.eq-editor-tip').tooltip(); }, 1000);
+    </script>
+    <script>
+        $(document).ready(function () {
+            var userAgent = window.navigator.userAgent.toLowerCase(),
+           ios = /iphone|ipod|ipad/.test(userAgent);
+            if (ios) {
+                $('#symboleCollection').addClass('scrollable');
+            };
+        });
+
+    </script>
+</body>
+</html>

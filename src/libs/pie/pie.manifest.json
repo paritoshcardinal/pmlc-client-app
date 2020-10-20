@@ -1,0 +1,21 @@
+{
+  "hash": "-907757973",
+  "info": [
+    {
+      "element": "categorize-el",
+      "pie": "@pie-element/categorize",
+      "version": {
+        "requested": "6.4.1",
+        "resolved": "6.4.1"
+      }
+    },
+    {
+      "element": "multiple-choice",
+      "pie": "@pie-element/multiple-choice",
+      "version": {
+        "requested": "5.3.5",
+        "resolved": "5.3.5"
+      }
+    }
+  ]
+}

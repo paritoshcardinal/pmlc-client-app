@@ -1,0 +1,12 @@
+{
+  "copyFiles": [
+    {
+      "from": "src/angular_compiler_plugin.js",
+      "to": "node_modules/hydra-ngtools-webpack/src/angular_compiler_plugin.js"
+    }
+
+  ],
+  "settings": {
+    "whenFileExists": "overwrite"
+  }
+}
