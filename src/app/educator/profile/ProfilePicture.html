@@ -1,0 +1,19 @@
+﻿    <div class="image-editor">
+        <input type="file" class="cropit-image-input" (change)="getFileName()">
+        <div class="custom-file-input" id="altr" (click)="clickInput();"><span class="inp-img-btn">Choose file</span> <span>{{fileName}}</span></div>
+       
+        <div class="cropit-preview"></div>
+         <div class="zoomer-controler-box">
+            <span class="small-icon-image"></span>
+            <input type="range" class="cropit-image-zoom-input custom-range">
+            <span class="large-icon-image"></span>
+        </div>
+    </div>
+    <div class="btn-create-top-task-block profile-pic-btn">
+        <ul>
+            <li>
+                <a href="javascript:void(0);" (click)="closePopup()" class="profile-pic-cancel-btn">Cancel</a>
+                <a href="javascript:void(0);" (click)="applyCrop()" class="profile-picture-apply-btn" [ngClass]="{'profile-pic-apply-btn-disable': isDisable }">Apply</a>
+            </li>
+        </ul>
+    </div>

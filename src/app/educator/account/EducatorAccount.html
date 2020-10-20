@@ -1,0 +1,332 @@
+﻿<div class="account-edit-main-div educator-account">
+    <div>
+        <a href="javascript:void(0)" class="account-edit-btn" (click)="updateMyAccountDetail()">Save Changes</a>
+        <h2> My Account</h2>
+        <p class="top-account-header">
+            Your current account details are shown below. Make any necessary changes, then click save.
+        </p>
+    </div>
+    <div *ngIf="!ui.isSchoolEdPopup" class="school-edition-account join-school-section">
+        <div class="school-info-heading">
+            <h4>Access School Edition</h4>
+            <p>
+                Want to take family engagement and teacher collaboration to the next level? PowerMyLearning Connect School Edition is designed to help!
+                <br /><a href="https://powermylearning.org/learn/connect/pricing/" target="_blank">Learn more</a>
+            </p>
+        </div>
+        <div class="enter-school-code-section">
+            <div class="edition-code">
+                If you have a School Edition Code, you may enter it here.
+                <div class="information-student">
+                    <a href="javascript:void(0);" (click)="toggleSchoolEdHelp(true)">
+                        <img alt="" class="enabled-scoring-info" src="/Content/assets/images/iTask/questionMark.png">
+                    </a>
+                    <div class="popover right supporting-img-tips" [ngStyle]="{display: ui.showSchoolEdPopup == true ? 'block': 'none'}">
+                        <a class="close" href="javascript:void(0);" (click)="toggleSchoolEdHelp(false)"></a>
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <p>
+                                Once your school subscribes to PowerMyLearning Connect School Edition,
+                                an administrator can provide you with a code to upgrade your account.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left full-width">
+                <div class="field-group" [ngClass]="{'disable-btn': !ui.schoolEdCodeApplyLoading}">
+                    <input type="text" class="access-code" [(ngModel)]="ui.schoolEdCode">
+                    <input type="button" class="green-btn" value="Apply" (click)="verifyCode()">
+                </div>
+                <div [hidden]="ui.schoolEdCodeApplyLoading" class="load-wrapper school-code-apply">
+                    <div class="loading-cont school-code-apply-container">
+                        <img src="/Content/assets/images/ajax-loader.gif">
+                    </div>
+                </div>
+                <div [hidden]="!ui.isInvalidCodeErrMsg" class="error-msg">{{ui.codeErrMsg}}</div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="ui.isSchoolEdPopup" class="school-edition-account">
+        <h4>School Edition</h4>
+        You have access to School Edition at {{ui.schoolEditionModel.schoolName}}. <a class="remove-school-link" [ngClass]="{'disable-btn': ui.isRemoveButtonDisable}" href="javascript:void(0)" (click)="GetEducatorDetailsAndRemove()">Remove</a>
+    </div>
+    <div class="account-edit-left-section">
+        <div>
+            <h4>Profile</h4>
+            <div class="input-container">
+                <div>
+                    <div class="form-filed bottom-error">
+                        <label>First Name</label>
+                        <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.FirstName" maxlength="25">
+                        <label class="{{ui.firstNameErrorClass}}" *ngIf="ui.firstNameErrorShow">{{ui.firstNameErrorMessage}}</label>
+                    </div>
+                    <div class="form-filed bottom-error">
+                        <label>Last Name</label>
+                        <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.LastName" maxlength="25">
+                        <label class="{{ui.lastNameErrorClass}}" *ngIf="ui.lastNameErrorShow">{{ui.lastNameErrorMessage}}</label>
+                    </div><br />
+                    <div class="form-filed bottom-error">
+                        <label>Email Address</label>
+                        <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.Email" maxlength="80">
+                        <label class="{{ui.emailErrorClass}}" *ngIf="ui.emailErrorShow">{{ui.emailErrorMessage}}</label>
+                    </div>
+                    <div class="form-filed bottom-error">
+                        <label>Display Name</label>
+                        <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.DisplayName" maxlength="25">
+                        <label class="{{ui.displayNameErrorClass}}" *ngIf="ui.displayNameErrorShow">{{ui.displayNameErrorMessage}}</label>
+                    </div>
+                </div>
+                <div class="profile-pic-uplaod-container">
+                    <div class="profile-picture-box">
+                        <span>
+                            <img id="defaultAccountPic" src="{{ !educatorAccountData.ProfileThumbUrl ? '/Content/assets/images/profile_icon.png': educatorAccountData.ProfileThumbUrl}}" class="educator-account-img">
+                        </span>
+                        <a *ngIf="educatorAccountData.ProfileThumbUrl" href="javascript:void(0);" (click)="removeProfileImageFromDatabase()"><span class="profile-picture-clos-btn"></span></a>
+                    </div>
+                    <div class="profile-pic-uplaod-btn" *ngIf="!educatorAccountData.ProfileThumbUrl">
+                        <span class="profile-pic-btn-file" (click)="openPopup()">
+                            <span>Click to upload</span>
+                        </span><br>
+                        <span>a profile image</span>
+                    </div>
+                    <div class="profile-pic-uplaod-btn" *ngIf="educatorAccountData.ProfileThumbUrl">
+                        <span class="profile-pic-btn-file" (click)="openPopup()">
+                            <span>Change image</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="teacher-role-container">
+                <div class="form-filed no-css-role-select">
+                    <label>Your Role</label>
+                    <multiselect-dropdown [options]="educatorTypeList"
+                                          [defaultmodelsingle]="educatorAccountData.EducatorType"
+                                          [settings]="{multiSelect:false,closeOnSelect:true,ellipsisCount:45}"
+                                          [texts]="'Please Select'"
+                                          (selectedmodel)="onChangeEducatorType($event)"></multiselect-dropdown>
+                    <label class="{{ui.eduTypeErrorClass}}" *ngIf="ui.eduTypeErrorShow">{{ui.eduTypeErrorMessage}}</label>
+                </div>
+                <div class="form-filed" *ngIf="educatorAccountData.EducatorType=='Other'">
+                    <label>Please enter your role or title</label>
+                    <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.OtherEducatorType">
+                    <label class="{{ui.eduTypeOtherErrorClass}}" *ngIf="ui.eduTypeOtherErrorShow">{{ui.eduTypeOtherErrorMessage}}</label>
+                </div>
+                <div class="form-filed state-school-div" *ngIf="!ui.isSchoolEdPopup">
+                    <div class="field-multiple2">
+                        <div class="select-state state-left">
+                            <label>State</label>
+                            <multiselect-dropdown [options]="ui.stateArray"
+                                                  [defaultmodelsingle]="educatorAccountData.State"
+                                                  [settings]="{multiSelect:false,closeOnSelect:true}"
+                                                  [texts]="{defaultTitle:educatorAccountData.State}"
+                                                  (selectedmodel)="onChangeState($event)"></multiselect-dropdown>
+                        </div>
+                        <div class="inp-city inp-your-school">
+                            <label>Your School <span *ngIf="educatorAccountData.EducatorType!='K12Teacher'" class="note">(optional) </span></label>
+                            <span (focusout)="clickOutSchoolNameSuggestion()">
+                                <input type="text" class="signup-inp-field" [(ngModel)]="educatorAccountData.SchoolName" (keyup)="getSchoolNames()">
+                                <div class="educator-dropdown" *ngIf="ui.schoolNameSuggestionArray.length > 0">
+                                    <ul class="typeahead dropdown-menu">
+                                        <li *ngFor="let schName of ui.schoolNameSuggestionArray" [value]="schName.SchoolId" (click)="selectSchoolNameFromSuggestion(schName.SchoolId,schName.SchoolName)">
+                                            <a href="javascript:void(0)">{{schName.SchoolName}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <label class="{{ui.schoolNameErrorClass}}" *ngIf="ui.schoolNameErrorShow">{{ui.schoolNameErrorMessage}}</label>
+
+                        </div>
+                    </div>
+                    <p>To <strong>update your school</strong>, narrow by state or type your zip code into the 'Your School' field.</p>
+                </div>
+            </div>
+            <div class="form-filed no-css-role-select clear-obj" *ngIf="educatorAccountData.EducatorType == 'K12Teacher' || educatorAccountData.EducatorType == 'HomeSchoolTeacher'">
+                <div>
+                    <label>What grades and subjects do you teach?</label>
+                    <multiselect-icon-dropdown [inputConfig]="{options:gradeList, defaultTitle: 'Select Grades', multiselect: true, closeOnSelect: false}"
+                                               [defaultmodel]="selectedGrades"
+                                               (selectedmodel)="setGradeCriteria($event)"></multiselect-icon-dropdown>
+                    <label class="error" *ngIf="ui.gradesErrorShow">Please select at least one grade.</label>
+                    <div class="selected-filter" *ngIf="selectedGrades.length>0">
+                        <span class="filter-name" *ngFor="let grade of selectedGrades">
+                            <a href="javascript:void(0)" class="close" (click)="remove('selectedGrades', grade)"></a>{{grade.name}}
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <multiselect-icon-dropdown [inputConfig]="{options:subjectList, defaultTitle: 'Select Subjects', multiselect: true, closeOnSelect: false}"
+                                               [defaultmodel]="selectedSubjects"
+                                               (selectedmodel)="setSubjectCriteria($event)"></multiselect-icon-dropdown>
+                    <label class="error" *ngIf="ui.subjectsErrorShow">Please select at least one subject.</label>
+                    <div class="selected-filter" *ngIf="selectedSubjects.length>0">
+                        <span class="filter-name" *ngFor="let subject of selectedSubjects">
+                            <a href="javascript:void(0)" class="close" (click)="remove('selectedSubjects', subject)"></a>{{subject.name}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="modal-backdrop" [hidden]="ui.isProfilePicPopupClose"></div>
+    <div aria-hidden="true" aria-labelledby="addnewcontent-popupLabel" role="dialog" class="modal-medium fade in profile-picture-main-modal" [hidden]="ui.isProfilePicPopupClose">
+        <div class="site-popup">
+            <div class="modal-header">
+                <a href="javascript:void(0);" class="modal-close" data-dismiss="modal" aria-hidden="true" (click)="closePopup()">Close</a>
+                <h3 class="modal-title">Position and Size Your Photo</h3>
+            </div>
+            <div class="modal-content-box">
+                <profile-picture [cloudMediaId]="educatorAccountData.CloudMediaId" (onClosePopup)="handleClosePopup()" (onApplyCrop)="handleAppplyCrop($event)"></profile-picture>
+            </div>
+            <div class="modal-bottom-img"></div>
+        </div>
+    </div>
+    <div class="account-edit-right-section">
+        <div class="form-container">
+            <div class="password-section">
+                <h4>Password</h4>
+                <p>To <strong>change your password,</strong> enter your current password first, then choose a new one.</p>
+                <div class="form-filed">
+                    <label>Current Password</label>
+                    <input type="password" class="signup-inp-field" [(ngModel)]="educatorAccountData.Password" maxlength="30">
+                    <span class="note">6-30 characters, no spaces</span>
+                    <label class="{{ui.currentPasswordErrorClass}}" *ngIf="ui.currentPasswordErrorShow">{{ui.currentPasswordErrorMessage}}</label>
+                    <div class="clear"></div>
+                </div>
+                <div class="form-filed">
+                    <label>Enter New Password</label>
+                    <input type="password" class="signup-inp-field" [(ngModel)]="educatorAccountData.NewPassword" maxlength="30">
+                    <span class="note">6-30 characters, no spaces</span>
+                    <label class="{{ui.newPasswordErrorClass}}" *ngIf="ui.newPasswordErrorShow">{{ui.newPasswordErrorMessage}}</label>
+                    <div class="clear"></div>
+                </div>
+                <div class="form-filed">
+                    <label>Confirm New Password</label>
+                    <input type="password" class="signup-inp-field" [(ngModel)]="ui.confirmPassword" maxlength="30">
+                    <span class="note">&nbsp;</span>
+                    <label class="{{ui.rePasswordErrorClass}}" *ngIf="ui.rePasswordErrorShow">{{ui.rePasswordErrorMessage}}</label>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="link-to-google" *ngIf="ui.authToken">
+        <a href="javascript:void(0);" class="connect-to-drive" (click)="disconnectGoogleDriveWarn()">Disconnect from Google Drive</a>
+        <h4>Google Drive</h4>
+        Your PowerMyLearning account is connected to a Google Drive account.
+        <div class="clear"></div>
+    </div>
+    <div class="settings-container" id="settings">
+        <div class="email-settings">
+            <h4>Email Settings</h4>
+            <div class="form-filed other-role-select">
+                <input type="checkbox" name="recevieEmailUpdate" id="recevieEmailUpdate" [(ngModel)]="educatorAccountData.EnableEmailUpdates" value="true" class="fancy-check-btn chk-roster-class" checked />
+                <label for="recevieEmailUpdate">
+                    <span class="absolute">I'd like to receive email updates from PowerMyLearning Connect.</span>
+                </label>
+            </div>
+            <div class="form-filed other-role-select">
+                <input type="checkbox" name="recevieEducatorNewsLetter" id="recevieEducatorNewsLetter" [(ngModel)]="educatorAccountData.EnableNewsletterUpdates" value="true" class="fancy-check-btn chk-roster-class" checked />
+                <label for="recevieEducatorNewsLetter">
+                    <span class="absolute">I'd like to receive the PowerMyLearning Connect educator newsletter.</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="chk-human save-changes">
+        <span id="account-updated" class="profile-saved">Saved!</span>
+
+        <div id="account-updated-loading" class="load-wrapper">
+            <div class="loading-cont">
+                <img src="/Content/assets/images/ajax-loader.gif">
+            </div>
+            <div class="load-overlay"></div>
+        </div>
+        <a href="javascript:void(0)" class="account-edit-btn" (click)="updateMyAccountDetail()">Save Changes</a>
+    </div>
+
+    <div *ngIf="ui.disconnectModal">
+        <div class="modal-backdrop"></div>
+        <div aria-hidden="true" aria-labelledby="addnewcontent-popupLabel" role="dialog" class="modal-medium fade in google-model">
+            <div class="site-popup">
+                <div class="modal-header">
+                    <a href="javascript:void(0);" class="modal-close" data-dismiss="modal" aria-hidden="true" (click)="ui.disconnectModal=false">Close</a>
+                    <h3 class="modal-title">Disconnect Google Drive Account</h3>
+                </div>
+                <div class="modal-content-box">
+                    Are you sure you want to disconnect?
+                    <div class="google-model-section">
+                        <ul>
+                            <li><a (click)="ui.disconnectModal=false" class="modal-cancel-btn" href="javascript:void(0);">Cancel</a></li>
+                            <li><a href="javascript:void(0);" class="google-model-btn" (click)="disconnectGoogleDrive()">Yes, disconnect</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start: School Edition related popups -->
+    <remove-staff (parentEmitterReceiver)="receiveChildrenEvent($event);" [inputData]="ui.popupModelData.removeStaffData" *ngIf="ui.isSchoolEdRemovePopup"></remove-staff>
+    <div [hidden]="ui.isSchoolEdConnectedPopup">
+        <div aria-hidden="true" aria-labelledby="addnewcontent-popupLabel" role="dialog" class="modal-medium fade in school-edition-connected-popup">
+            <div class="site-popup">
+                <div class="modal-header">
+                    <a href="javascript:void(0);" class="modal-close" data-dismiss="modal" aria-hidden="true" (click)="closePopupConnected()">Close</a>
+                    <h3 class="modal-title">
+                        {{ui.isSchoolAdmin ? "You are now a School Administrator!":"Your account is now linked!"}}
+                    </h3>
+                </div>
+                <div class="modal-content-box">
+                    <div class="content-div">
+                        You now have access to PowerMyLearning Connect School Edition which means lots of great new features
+                        for your school community!
+                    </div>
+                    <div class="modal-panel">
+                        <div class="modal-panel-leftbox">
+                            <img class="image-mobile" src="/Content/assets/images/school-edition_mobile.png" />
+                        </div>
+                        <div class="modal-panel-right-box">
+                            <h3>Research-Based Family Playlists</h3>
+                            <p>
+                                Engage families in classroom content with mobile-friendly, multilingual home playlists that put
+                                students in the role of the teacher at home, leading their families through dynamic home learning activities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-panel">
+                        <div class="modal-panel-leftbox">
+                            <img class="image-library" src="/Content/assets/images/school-edition_library.png" />
+                        </div>
+                        <div class="modal-panel-right-box">
+                            <h3>Shared School Library</h3>
+                            <p>
+                                Keep all of your school’s digital content in one place. Build a shared library of resources so educators can
+                                leverage each other’s work and spend less time searching for quality content.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-panel" *ngIf="ui.isSchoolAdmin">
+                        <div class="modal-panel-leftbox">
+                            <img class="image-community" src="/Content/assets/images/dashboard_icon.png" />
+                        </div>
+                        <div class="modal-panel-right-box">
+                            <h3>School Dashboard</h3>
+                            <p>
+                                Manage users at your school and gain insight into key metrics on educator professional development,
+                                student assignments and family engagement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-bottom-img"></div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+    </div>
+    <!-- End: School Edition related popups -->
+</div>
+<div #modalOutlet></div>

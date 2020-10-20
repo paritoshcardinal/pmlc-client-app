@@ -1,0 +1,745 @@
+﻿
+.vertical-top-tab-my-account {
+    height: 36px;
+    background: url(/Content/assets/images/sub-nav-bg.png) repeat-x top left;
+    position: relative;
+    margin-top: -6px;
+    z-index: 0;
+}
+
+.account-edit-main-div {
+    padding: 20px 3% 20px 3%;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    color: #232323;
+    background: #e7edf7;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    display: inline-block;
+    height: 30px;
+    padding: 3px 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+    textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+        border-color: #abacae;
+        outline: 0;
+        outline: none;
+        -webkit-box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+    }
+
+
+
+.account-edit-main-div input[type="submit"], .account-edit-main-div input[type="button"], button {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
+
+.account-edit-main-div .account-edit-right-section {
+    margin-top: 10px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+}
+
+.account-edit-main-div .account-edit-left-section {
+    border: solid 1px #d7d7d7;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.account-edit-main-div .form-filed label.error {
+    background: url(/Content/assets/images/cross-icon.png) no-repeat left 8px;
+    padding-left: 22px;
+    line-height: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #494949;
+    font-weight: normal !important;
+    width: auto;
+    font-size: 11px;
+    font-family: MuseoSans-500 !important;
+    font-style: italic !important;
+    background-size: 18px;
+    float: inherit;
+}
+
+
+
+
+.account-edit-main-div .account-edit-dateof-birth {
+    margin-top: 20px;
+    clear: left;
+}
+
+.account-edit-main-div .account-edit-privecy-policy {
+    float: left;
+    margin: 14px 25px 20px 30px;
+    width: 40%;
+    font-size: 13px;
+}
+
+.account-edit-main-div .account-edit-btn {
+    background: url(/Content/assets/images/get-account-bg.png) no-repeat;
+    width: 182px;
+    height: 45px;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: #e4831c;
+    font-family: 'MuseoSans-700';
+    font-size: 20px;
+    float: right;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 10px;
+}
+
+    .account-edit-main-div .account-edit-btn:hover {
+        color: #e4831c;
+        text-decoration: none;
+    }
+
+.account-edit-main-div .password-section {
+    padding: 15px 25px;
+    float: left;
+}
+
+.account-edit-main-div .find-school {
+    z-index: 9;
+    float: left;
+}
+
+.account-edit-main-div .save-changes {
+    width: 100%;
+    float: left;
+    text-align: center;
+    clear: both;
+    margin-left: -120px;
+    text-align: center;
+}
+
+.account-edit-main-div .form-filed label.error-password {
+    background: url(/Content/assets/images/cross-icon.png) no-repeat left 0px;
+    padding-left: 22px;
+    line-height: 15px;
+    padding-bottom: 10px;
+    color: #494949;
+    font-weight: normal !important;
+    width: auto;
+    font-size: 11px !important;
+    font-family: MuseoSans-500 !important;
+    font-style: italic !important;
+    background-size: 18px;
+    float: inherit;
+}
+
+.account-edit-main-div .account-edit-left-section .note {
+    font-style: italic;
+}
+
+.account-edit-main-div .account-edit-right-section .note {
+    font-style: italic;
+}
+
+.account-edit-main-div .profile-saved {
+    background: url(/Content/assets/images/check-icon.png) no-repeat left 6px;
+    top: -10px;
+    font-family: 'MuseoSans-300';
+    font-size: 13px;
+    padding-left: 30px;
+    line-height: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #494949;
+    font-weight: bold;
+}
+
+.account-edit-main-div .form-filed {
+    margin-top: 6px;
+    position: relative;
+    width: 302px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.account-edit-main-div .edition-code {
+    font-family: MuseoSans-500;
+    font-size: 14px;
+    color: #494949;
+    margin-top: 20px;
+}
+
+.account-edit-main-div .label-title {
+    float: left;
+}
+
+.account-edit-main-div .information-student {
+    position: relative;
+    display: inline-block;
+}
+
+.account-edit-main-div .popover-content {
+    color: #000000 !important;
+    padding: 9px 14px;
+}
+
+.account-edit-main-div .information-student .popover .close {
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+.account-edit-main-div .information-student .popover-content p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.account-edit-main-div .supporting-img-tips {
+    top: -55px;
+}
+
+.account-edit-main-div .information-student .popover.right .arrow {
+    top: 83%;
+}
+
+.account-edit-main-div .top-pos {
+    top: 25%;
+}
+
+.account-edit-main-div .filter-option {
+    color: #4a4a4a;
+    font-family: 'MuseoSans-500';
+    font-size: 12px;
+    padding-right: 10px;
+    min-width: 160px;
+    text-align: left;
+}
+
+.account-edit-main-div .error-msg {
+    background: url(/Content/assets/images/cross-icon.png) no-repeat left 6px;
+    padding-left: 30px;
+    line-height: 15px;
+    font-family: 'MuseoSans-300';
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #494949;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+.account-edit-main-div .field-group {
+    float: left;
+    width: 80%;
+}
+
+.account-edit-main-div .member-box {
+    font-family: MuseoSans-500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.account-edit-main-div .school-edition-name {
+    font-family: MuseoSans-500;
+    font-size: 20px;
+    color: #000000;
+}
+
+.account-edit-main-div a.remove-school-link {
+    font-family: MuseoSans-500;
+    font-size: 13px;
+    color: #d0011b;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.account-edit-main-div .remove-account-popup h3.modal-title {
+    font-family: MuseoSans-500;
+    font-size: 18px;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+.account-edit-main-div .remove-account-popup p {
+    font-family: MuseoSans-500;
+    font-size: 15px;
+    color: #494949;
+    margin-bottom: 15px;
+}
+
+.account-edit-main-div .remove-account-popup {
+    top: 25%;
+}
+
+.account-edit-main-div .modal-bottom-img {
+    height: 14px;
+    background: url(/Content/assets/images/modal-assets.png) no-repeat 0 -54px;
+}
+
+.account-edit-main-div .modal-medium {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    z-index: 1050;
+    width: 634px;
+    margin-left: -317px;
+    background-color: transparent;
+}
+
+.account-edit-main-div .disable-btn {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.account-edit-main-div .full-width {
+    width: 100%;
+}
+
+.account-edit-main-div .content-div {
+    font-family: MuseoSans-500;
+    font-size: 16px;
+    color: #494949;
+    margin: 5px 0 25px 0;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.account-edit-main-div .modal-panel-right-box h3 {
+    font-family: MuseoSans-500 !important;
+    font-size: 18px !important;
+    color: #042060;
+    letter-spacing: 0.7px;
+    margin: 0 0 6px 0;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.account-edit-main-div .modal-panel-right-box p {
+    font-family: MuseoSans-500;
+    font-size: 13px;
+    line-height: 1.38;
+    color: #494949;
+    font-weight: 500;
+}
+
+.account-edit-main-div .modal-panel-leftbox {
+    width: 15%;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+}
+
+.account-edit-main-div .modal-panel-right-box {
+    font-family: MuseoSans-500;
+    font-size: 18px;
+    color: #494949;
+    float: left;
+    width: 75%;
+}
+
+.account-edit-main-div .modal-panel {
+    margin: 10px 0;
+    width: 100%;
+    float: left;
+}
+
+.account-edit-main-div .image-mobile {
+    width: 80%;
+}
+
+.account-edit-main-div .image-library {
+    width: 60%;
+}
+
+.account-edit-main-div .image-community {
+    width: 80%;
+}
+
+@media only screen and (device-width: 768px), only screen and (max-width: 768px) {
+    .account-edit-main-div {
+        padding: 20px 15px;
+    }
+
+        .account-edit-main-div .password-section {
+            padding: 10px 15px;
+        }
+
+        .account-edit-main-div .account-edit-right-section {
+            padding: 0px!important;
+            margin-top: 20px !important;
+            margin-left: 0px!important;
+            clear: left;
+        }
+
+        .educator-account .join-school-section {
+                flex-flow: column;
+        }
+
+        .educator-account .school-info-heading {
+                width: 80% !important;
+        }
+
+        .join-school-section br {
+            display: none;
+        }
+
+        .educator-account .enter-school-code-section {
+            width: auto !important;
+        }
+
+        .account-edit-main-div .edition-code {
+            margin-top: 10px;
+        }
+
+        .account-edit-main-div .account-edit-left-section {
+            position: relative;
+            padding-bottom: 120px;
+            margin-top: 20px;
+        }
+
+        .educator-account .profile-pic-uplaod-container {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .account-edit-main-div .top-account-header{
+            width: 55%;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+
+        .account-edit-main-div.parent-account .account-edit-left-section {
+            padding-bottom: inherit;
+        }
+
+        .account-edit-main-div.student-account .account-edit-left-section {
+            padding-bottom: inherit;
+        }
+}
+
+.account-edit-main-div .connect-to-drive {
+    text-decoration: none;
+    background: -moz-linear-gradient(top, #8cbd17 0%, #648f00 100%);
+    background: -webkit-linear-gradient(top, #8cbd17 0%,#648f00 100%);
+    background: linear-gradient(to bottom, #8cbd17 0%,#648f00 100%);
+    border: solid 1px #608b00;
+    color: #fff;
+    padding: 12px 20px;
+    float: right;
+}
+
+.account-edit-main-div .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    opacity: 0.65;
+    background-color: #000;
+}
+
+.account-edit-main-div .modal-cancel-btn {
+    color: #1b55f5;
+    float: left;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.account-edit-main-div .modal-cancel-btn {
+    color: #1b55f5;
+    float: left;
+    margin: 15px 15px 10px 0px;
+    text-decoration: none;
+}
+
+    .account-edit-main-div .bottom-error .error {
+        position: inherit;
+        margin: 0px;
+        width: initial;
+        float: right;
+        top: -10px;
+        left: inherit;
+    }
+
+.account-edit-main-div h2 {
+    font-size: 27px;
+    margin-bottom: 0px;
+    color: #042060;
+    font-family: 'Museo-500';
+}
+
+.account-edit-main-div .form-filed p {
+    margin-top: -2px;
+    line-height: normal;
+    color: #4a4a4a;
+    font-size: 13px;
+}
+
+.account-edit-main-div strong {
+    font-family: MuseoSans-700;
+}
+
+.account-edit-main-div .signup-inp-field {
+    width: 278px;
+}
+
+.account-edit-main-div .form-filed label {
+    font-family: MuseoSans-700;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #494949;
+}
+
+.account-edit-main-div .form-filed span.note {
+    text-align: right;
+    font-family: 'MuseoSans-300';
+    font-size: 11px;
+    font-weight: 500;
+    text-align: right;
+    display: block;
+    padding-right: 15px;
+    float: right;
+    position: relative;
+    margin-top: -6px;
+    min-width: 200px;
+}
+
+.account-edit-main-div .account-edit-right-section .note {
+    font-style: italic;
+}
+
+.account-edit-main-div .form-filed .inp-city.inp-your-school {
+    width: 385px;
+    float: left;
+}
+
+.account-edit-main-div .form-filed .select-state.state-left {
+    float: left;
+    margin-right: 10px;
+    width: 82px;
+}
+
+.account-edit-main-div .selectpicker {
+    position: absolute;
+    z-index: -999;
+    display: block !important;
+}
+
+.account-edit-main-div .bootstrap-select .btn {
+    display: inline-block;
+    padding: 0px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #e1dede;
+    background-image: -moz-linear-gradient(top, #f2f2f2, #e1dede);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#e1dede));
+    background-image: -webkit-linear-gradient(top, #f2f2f2, #e1dede);
+    background-image: -o-linear-gradient(top, #f2f2f2, #e1dede);
+    background-image: linear-gradient(to bottom, #f2f2f2, #e1dede);
+    background-repeat: repeat-x;
+    border: 1px solid #bfbfbf;
+    border-color: #bfbfbf #bfbfbf #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-family: 'MuseoSans-500';
+    font-weight: 500;
+}
+
+.account-edit-main-div .bootstrap-select.btn-group .btn .filter-option {
+    overflow: hidden;
+    position: absolute;
+    left: 8px;
+    right: 23px;
+    text-align: left;
+    background: url(/Content/assets/images/select-line.jpg) no-repeat right top;
+    padding-right: 2px;
+    text-overflow: ellipsis;
+    font-size: 14px !important;
+    color: #333333 !important;
+    min-width: initial;
+}
+
+.account-edit-main-div .green-btn {
+    width: 65px !important;
+    height: 23px;
+    position: relative;
+    top: 2px;
+    background: -moz-linear-gradient(top, #8cbd17 0%, #648f00 100%);
+    background: -webkit-linear-gradient(top, #8cbd17 0%,#648f00 100%);
+    background: linear-gradient(to bottom, #8cbd17 0%,#648f00 100%);
+    box-shadow: inset 0 1px 2px 0 #eee;
+    border: solid 1px #608b00;
+    font-family: 'MuseoSans-500';
+    font-size: 19px !important;
+    color: #fff;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
+
+.account-edit-main-div .supporting-img-tips {
+    font-size: 12px;
+    left: 16px;
+    line-height: 14px;
+    top: -57px;
+    width: 295px;
+}
+
+.account-edit-main-div .popover .close {
+    background: url(/Content/assets/images/small_x.png) no-repeat left;
+    width: 10px;
+    height: 10px;
+    float: right;
+    text-indent: -9999px;
+    margin-top: 5px;
+    margin-right: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.account-edit-main-div .access-code {
+    float: left;
+    width: 70%;
+    border: solid 1px #dbdee2;
+    height: 32px;
+    box-shadow: none;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.account-edit-main-div .loading-cont {
+    position: absolute;
+    z-index: 99999;
+}
+
+    .account-edit-main-div .loading-cont img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -21px;
+        margin-left: -25px;
+    }
+
+.account-edit-main-div .load-wrapper {
+    position: relative;
+}
+
+.account-edit-main-div .chk-human {
+    margin-top: 15px;
+    display: flex;
+    margin-left: inherit;
+}
+
+.account-edit-main-div .typeahead {
+    min-width: 450px;
+    max-width: 550px;
+    white-space: normal;
+}
+
+    .account-edit-main-div .typeahead.dropdown-menu {
+        max-height: none;
+        overflow-y: auto;
+        height: 179px;
+        left: 0px !important;
+        top: 60px !important;
+    }
+
+.account-edit-left-section .input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educator-account .join-school-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educator-account .school-info-heading {
+    width: 60%;
+}
+
+.educator-account .enter-school-code-section {
+    width: 25%;
+}
+
+    .educator-account .enter-school-code-section .field-group {
+        width: initial;
+        display: flex;
+    }
+
+.account-edit-main-div h4 {
+    font-size: 19px;
+    font-family: MuseoSans-700;
+    color: #042060;
+    margin: 0px;
+}
+
+.account-edit-main-div .settings-container {
+    margin-top: 15px;
+    border: 1px solid #d7d7d7;
+    padding: 20px 30px;
+    background: #fff;
+}
+
+.account-edit-main-div .load-overlay {
+    background: #fff;
+    opacity: 0.56;
+    position: absolute;
+    z-index: 99998;
+    width: 182px;
+    height: 45px;
+    top: 0px;
+    left: 0px;
+}
+
+.account-edit-main-div .password-section h4, .account-edit-main-div .change-password-section h4 {
+    margin: 0px 0px 15px;
+}
+
+.account-edit-main-div .inp-your-school .note {
+    position: inherit !important;
+    margin-top: auto !important;
+}

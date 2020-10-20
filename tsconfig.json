@@ -1,0 +1,44 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers": false,
+    "sourceMap": false,
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2017",
+      "es2017.object"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+
+    "outDir": "",
+    "paths": {
+	  "@app/*": ["src/app/*"],
+      "myaccount-models/*": [ "src/app/myaccount/models/*" ],
+      "myaccount-services/*": [ "src/app/myaccount/services/*" ],
+      "rxjs-operators": [ "src/rxjs-operators" ]
+    },
+    "rootDir": "."
+  },
+  "exclude": [
+    "node_modules",
+    "Script/libs/typescriptlibs",
+    "node_modules/**/*",
+    "**/node_modules",
+    "node_modules/@typings/**/*"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}
+

@@ -1,0 +1,200 @@
+﻿
+.disable-btn {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+.staff-role-dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    width: 312px;
+    max-height: 80px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+    .staff-role-dropdown-menu > li > a {
+        display: block;
+        padding: 3px 9px;
+        clear: both;
+        font-weight: normal;
+        line-height: 20px;
+        color: #333;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+        .staff-role-dropdown-menu > li > a:hover {
+            color: #000;
+            background-color: #eeeeee;
+            text-decoration: none;
+        }
+
+.community-admin .filter-option {
+    color: #4a4a4a;
+    font-family: 'MuseoSans-500';
+    font-size: 12px;
+    padding-right: 10px;
+    width: 160px;
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+.school-remove-popup {
+    top: 80px !important;
+}
+
+.modal-header .modal-title {
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 0 0 10px;
+    margin: 0;
+    line-height: 30px;
+    font-family: MuseoSans-500;
+    letter-spacing: 0.6px;
+}
+
+.school-remove-popup p {
+    margin: 0 0 16px;
+    font-family: MuseoSans-500;
+    font-size: 15px;
+    color: #494949;
+    line-height: 20px;
+}
+
+.school-remove-popup .form-btn-filed {
+    width: 230px;
+    margin: 30px auto 10px auto;
+    overflow: hidden;
+}
+
+.school-remove-popup .cancel-btn {
+    float: left;
+    font-size: 16px;
+    margin: 10px 20px 0px 0px;
+    color: #1b55f5;
+}
+
+.school-remove-popup .form-button {
+    float: left;
+    cursor: pointer;
+    background: url(/Content/assets/images/form-btn-bg.png) no-repeat right;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: #e4831c !important;
+    font-family: 'MuseoSans-700';
+    font-weight: 300;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 20px 0 19px;
+    border-left: solid 1px #efb427;
+}
+
+.school-remove-popup .modal-content-box {
+    border-radius: 0 0 8px 8px;
+}
+
+.school-remove-popup .table th,
+.school-remove-popup .table td {
+    padding: 10px 8px;
+    border-top: 0;
+    width: 176px;
+    word-break: break-all;
+    vertical-align: middle;
+}
+
+.btn.community-admin {
+    background: #fff;
+    box-shadow: inherit;
+    border: 1px solid #ccc;
+    padding: 9px;
+    outline: none;
+}
+
+.scroll-model-body {
+    height: auto;
+    overflow-y: auto;
+    max-height: 465px !important;
+}
+
+.btn-group-center {
+    display: flex;
+    justify-content: center;
+    -webkit-box-pack: center;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.modal-medium {
+    position: fixed;
+    top: 48px;
+    left: 50%;
+    z-index: 1050;
+    width: 634px;
+    margin-left: -317px;
+    background-color: transparent;
+    outline: none;
+}
+
+.modal-header {
+    background: url(/Content/assets/images/modal-assets.png) no-repeat 0 0;
+    height: 42px;
+    padding: 0px;
+    border-bottom: 0px;
+}
+
+    .modal-header .modal-close {
+        background: url(/Content/assets/images/modal-assets.png) no-repeat -1px -77px;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        float: right;
+        margin: 6px 7px 0 0;
+    }
+
+    .modal-header h3 {
+        color: #fff;
+        font-size: 23px;
+        line-height: 43px;
+        padding-left: 15px;
+        font-weight: normal;
+    }
+
+.modal-medium .modal-content-box {
+    background: url(/Content/assets/images/modal-bg.png) repeat-y;
+    padding: 18px 24px;
+    font-family: 'MuseoSans-500';
+    max-height: none;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 0 0 8px 8px;
+}

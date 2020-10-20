@@ -1,0 +1,564 @@
+﻿
+.educator-account .school-edition-account {
+    background-color: #fff;
+    border: solid 2px #62a2cb;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+    .educator-account .school-edition-account h4 {
+        font-family: MuseoSans-700;
+        font-size: 19px;
+        font-weight: bold;
+        color: #042060;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .educator-account .school-edition-account p {
+        font-family: MuseoSans-500;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+    }
+
+        .educator-account .school-edition-account p a {
+            color: #1b55f5;
+            text-decoration: none;
+        }
+
+            .educator-account .school-edition-account p a:hover {
+                color: #1b55f5;
+            }
+
+.educator-account .state-left .selectpicker {
+    max-width: 68px;
+}
+
+.educator-account .inp-your-school .signup-inp-field {
+    width: 367px;
+}
+
+.educator-account .inp-your-school .educator-dropdown {
+    height: 100px;
+    overflow: auto !important;
+}
+
+.educator-account .inp-your-school .dropdown-menu {
+    display: block;
+    min-width: 340px;
+}
+
+.educator-account .educator-account-img {
+    width: 82px;
+    height: 82px;
+}
+
+.educator-account .site-popup {
+    background-color: transparent;
+}
+
+.educator-account .modal-content-box {
+    position: static;
+}
+
+.educator-account .save-changes {
+    position: relative;
+}
+
+.educator-account.account-edit-main-div .profile-saved {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: -20px;
+}
+
+.educator-account.account-edit-main-div .load-wrapper {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -91px;
+    top: 9px;
+    display: none;
+}
+
+.educator-account.account-edit-main-div .loading-cont, .educator-account.account-edit-main-div .load-overlay {
+    width: 182px;
+    height: 45px;
+    top: 0px;
+    left: 0px;
+}
+
+.educator-account .inp-your-school .dropdown-menu > li > a {
+    font-family: MuseoSans-300;
+}
+
+.educator-account.account-edit-main-div .typeahead.dropdown-menu {
+    top: 116px !important;
+}
+
+.educator-account .link-to-google {
+    padding: 15px 20px;
+    margin-top: 15px;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 23px;
+    background-color: #fff;
+}
+.educator-account .link-to-google h4 {
+    margin-bottom: 4px;
+}
+
+.account-edit-main-div .email-settings .form-filed {
+    width: auto;
+    float: inherit;
+}
+.account-edit-main-div .email-settings h4 {
+    margin-bottom: 10px;
+}
+
+.educator-account.account-edit-main-div .modal-medium.google-model {
+    width: 400px;
+    left: 59%;
+    top: 30%;
+}
+
+    .educator-account.account-edit-main-div .google-model .modal-header {
+        border-top-right-radius: 8px;
+            background: url(/Content/assets/images/modal-assets.png) no-repeat 0 0;
+    height: 42px;
+    padding: 0px!important;
+        border-bottom: 0px;
+    }
+    .educator-account.account-edit-main-div .google-model .modal-header .modal-close {
+    background: url(/Content/assets/images/modal-assets.png) no-repeat -1px -77px;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    float: right;
+    margin: 6px 7px 0 0;
+}
+        .educator-account.account-edit-main-div .google-model .modal-header .modal-title {
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 0 0 10px;
+        margin: 0;
+    line-height: 30px;
+}
+
+    .educator-account.account-edit-main-div .google-model .modal-content-box {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+            background: url(/Content/assets/images/modal-bg.png) repeat-y;
+    padding: 18px 24px;
+    font-family: 'MuseoSans-500';
+    max-height: none;
+    overflow-y: auto;
+    position: relative;
+    }
+
+.educator-account.account-edit-main-div .google-model-section {
+    height: 40px;
+    margin: 15px auto 0px auto;
+    clear: both;
+    width: 225px;
+}
+
+.educator-account.account-edit-main-div .google-model-btn {
+    background: -moz-linear-gradient(top, #8cbd17 0%, #648f00 100%);
+    background: -webkit-linear-gradient(top, #8cbd17 0%,#648f00 100%);
+    background: linear-gradient(to bottom, #8cbd17 0%,#648f00 100%);
+    box-shadow: inset 0 1px 3px 0 #b8dc65;
+    border: solid 1px #608b00;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    line-height: 33px;
+    cursor: pointer;
+    font-family: 'MuseoSans-700';
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    padding: 7px 12px;
+    text-shadow: inherit;
+    float: left;
+    text-decoration: none;
+}
+
+.educator-account .profile-pic-uplaod-container {width:350px;}
+
+.educator-account .school-edition-connected-popup .modal-header {
+    background: url(/Content/assets/images/modal-assets.png) no-repeat 0 0;
+    height: 42px;
+    padding: 0px !important;
+    border-bottom: 0px;
+}
+
+.educator-account .school-edition-connected-popup .modal-content-box {
+    background: url(/Content/assets/images/modal-bg.png) repeat-y;
+    padding: 18px 24px;
+    font-family: 'MuseoSans-500';
+    max-height: none;
+    overflow-y: auto;
+    position: relative;
+}
+
+.educator-account .school-edition-connected-popup h3 {
+    font-family: MuseoSans-500;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 12px;
+    padding: 0 0 5px 0;
+}
+
+.educator-account .school-edition-connected-popup h2 {
+    font-family: MuseoSans-500;
+    font-size: 24px;
+    color: #042060;
+    margin: 0;
+    letter-spacing: 0.7px;
+}
+
+.educator-account .school-edition-connected-popup .modal-header .modal-close {
+    background: url(/Content/assets/images/modal-assets.png) no-repeat -1px -77px;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    float: right;
+    margin: 6px 7px 0 0;
+}
+
+.educator-account .school-edition-connected-popup .modal-header h3 {
+    color: #fff;
+    padding-left: 15px;
+    font-size: 24px;
+    font-family: MuseoSans-500;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 6px 0 0 10px;
+}
+
+.educator-account .school-edition-connected-popup .modal-medium .modal-content-box {
+    background: url(/Content/assets/images/modal-bg.png) repeat-y;
+    padding: 18px 24px;
+    font-family: 'MuseoSans-500';
+    max-height: none;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 0 0 8px 8px;
+}
+
+.educator-account .school-edition-connected-popup .modal-body {
+    max-height: none !important;
+}
+
+.educator-account .school-edition-connected-popup .site-popup {
+    z-index: 99999;
+}
+.educator-account .school-code-apply {
+    text-align: center;
+    margin: auto;
+    width: 182px;
+}
+
+.educator-account .school-code-apply-container {
+    width: 182px;
+    height: 45px;
+    top: 0px;
+    left: 105px;
+}
+
+
+.educator-account .profile-picture-main-modal {
+    top: 35px;
+}
+
+    .educator-account .profile-picture-main-modal .modal-header {
+        background: url(/Content/assets/images/modal-assets.png) no-repeat 0 0;
+        height: 42px;
+        padding: 0px !important;
+        border-bottom: 0px;
+    }
+
+        .educator-account .profile-picture-main-modal .modal-header .modal-close {
+            background: url(/Content/assets/images/modal-assets.png) no-repeat -1px -77px;
+            width: 30px;
+            height: 30px;
+            text-indent: -9999px;
+            float: right;
+            margin: 6px 7px 0 0;
+        }
+
+        .educator-account .profile-picture-main-modal .modal-header .modal-title {
+            color: #fff;
+            font-size: 18px;
+            padding: 6px 0 0 10px;
+        }
+
+    .educator-account .profile-picture-main-modal.modal-medium .modal-content-box {
+        background: url(/Content/assets/images/modal-bg.png) repeat-y;
+        padding: 18px 24px;
+        font-family: 'MuseoSans-500';
+        max-height: none;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .educator-account .profile-picture-main-modal .modal-bottom-img {
+        height: 14px;
+        background: url(/Content/assets/images/modal-assets.png) no-repeat 0 -54px;
+    }
+
+    .educator-account .profile-picture-main-modal .cropit-preview {
+        background-color: #f8f8f8;
+        background-size: cover;
+        border: 5px solid #ccc;
+        border-radius: 3px;
+        margin-top: 7px;
+        width: 300px;
+        height: 300px;
+    }
+
+@media only screen and (device-width: 768px), only screen and (max-width: 768px) {
+
+
+    .educator-account .school-edition-account .field-group {
+        width: 95%;
+    }
+
+    .educator-account .school-edition-account .access-code {
+        width: 65%;
+    }
+
+    .educator-account .school-edition-account .green-btn {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .educator-account .school-edition-account .field-group .green-btn {
+        height: 40px!important;
+        width:81px!important;
+    }
+}
+
+.educator-account .join-school-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educator-account .school-info-heading {
+    width: 60%;
+}
+
+.educator-account .enter-school-code-section {
+    width: 25%;
+}
+
+.educator-account .enter-school-code-section .field-group {
+    width: initial;
+    display: flex;
+}
+
+.account-edit-left-section h4 {
+    font-size: 19px;
+    font-family: MuseoSans-700;
+    color: #042060;
+    margin: 0px;
+}
+
+.educator-account .profile-pic-uplaod-container {
+    border: 0px !important;
+    padding: 0px !important;
+    height: 85px;
+}
+
+.educator-account .profile-pic-uplaod-container .profile-pic-btn-file {
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'MuseoSans900';
+}
+
+.teacher-role-container .no-css-role-select .bootstrap-select {
+    width: 292px !important;
+}
+
+.teacher-role-container .state-school-div {
+    width: auto!important;
+}
+
+.teacher-role-container .field-multiple2 {
+    width: 100%;
+    display: flex;
+}
+
+.notification-info {
+    padding-left: 21px;
+    border-top: 1px solid #d3d3d3;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.notification-info h5 {
+    font-size: 16px;
+    font-family: MuseoSans-700;
+    color: #042060;
+}
+
+.email-notification-container h6{
+    font-size: 14px;
+    font-family: MuseoSans-700;
+    color: #9b9b9b;
+    margin-top: 10px;
+}
+
+.notification-message-view {
+    font-size: 13px;
+    color: #4a4a4a;
+    display: flex;
+}
+
+.notification-message-view label {
+    float: left;
+    margin-right: 3px;
+
+}
+
+.notification-message-view .digest-head {
+    font-family: MuseoSans-700;
+    color: #042060;
+}
+
+.label-text {
+    display: block;
+    font-family: MuseoSans-700;
+    color: #042060;
+    line-height: 18px;
+}
+
+.notification-message-check {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.notification-message-check .btn-group .btn {
+    height: 32px;
+    border: 1px solid #ddd;
+    font-size: 12px !important;
+    text-shadow: none;
+    box-shadow: none;
+    background: #fff;
+    font-family: MuseoSans-700;
+    min-width: 50px;
+    margin-right: 0;
+    padding: 4px 10px;
+}
+
+.notification-message-check .btn-group .btn:first-child {
+    margin-left: 0;
+    -webkit-border-bottom-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    -webkit-border-top-left-radius: 25px;
+    border-top-left-radius: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    -moz-border-radius-topleft: 25px;
+}
+
+.notification-message-check .btn-group .btn:last-child {
+    margin-left: 0;
+    -webkit-border-top-right-radius: 25px;
+    border-top-right-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    -moz-border-radius-topleft: 25px;
+    border-left: 0px;
+}
+
+.notification-message-check .btn-group .btn.active {
+    background: #70a742!important;
+    color: #fff;
+}
+
+.digest-container {
+    margin-top: 25px;
+}
+
+.digest-container .notification-message {
+    display: flex;
+}
+
+.educator-account .selected-filter {
+    background-color: #fff;
+    border: solid 1px #cccccc;
+    border-radius: 3px;
+    padding: 0px 4px 3px;
+    clear:left;
+     position: relative;
+    left: 305px;
+    margin-top: -45px;
+    margin-bottom: 8px;
+}
+
+.educator-account .filter-name {
+    border-radius: 3px;
+    background-color: #dfdfdf;
+    padding: 3px;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 5px;
+    padding-right: 8px;
+    margin-top: 3px;
+    display: inline-block;
+    font-size: 12px;
+    color: #212b36;
+    line-height: 21px;
+}
+
+.educator-account .close {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+}
+
+.educator-account .close:before, .educator-account .close:after {
+    position: absolute;
+    left: 11px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.educator-account .close:before {
+    transform: rotate(45deg);
+}
+
+.educator-account .close:after {
+    transform: rotate(-45deg);
+}
+
+.educator-account .form-filed.clear-obj {
+    clear: left;
+}
+
+.educator-account.account-edit-main-div .form-filed.clear-obj label.error {
+    margin-top: -13px;
+    position: absolute;
+}
+
+.clear-obj .custom-select-btn {
+    width: 292px !important;
+}
+.account-edit-main-div.educator-account .educator-dropdown .dropdown-menu.single-select {height:auto!important;}
